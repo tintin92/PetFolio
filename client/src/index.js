@@ -1,13 +1,6 @@
 import React from "react";
-import reactDOM from "react-dom";
-import 'semantic-ui-css/semantic.min.css'
-import App from "./components/App";
-import { Provider } from "react-redux";
-import { store } from "./store";
-import "./style.css"
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-reactDOM.render(
-    // Wrap all APP with the react redux provider and pass the redux store to have access to global state
-    <Provider store={store}>
-        <App />
-    </Provider>, document.querySelector('#root'));
+ReactDOM.render(<App />, document.getElementById("root"));

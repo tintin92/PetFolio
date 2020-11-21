@@ -1,15 +1,21 @@
+
 import axios from "axios";
 
 export default {
-    // API request to server side 
-    register(data) {
-        return axios.post("/auth/register", data)
-    },
-    login(data) {
-        return axios.post("/auth/login", data)
-    },
-    loadUser(headers) {
-        return axios.get("/auth/user", headers)
-    }
-
-}
+  // Gets all pets
+  getPets: function () {
+    return axios.get("/api/pets");
+  },
+  // Gets the pet with the given id
+  getPet: function (id) {
+    return axios.get("/api/pets/" + id);
+  },
+  // Deletes the pet with the given id
+  deletePet: function (id) {
+    return axios.delete("/api/pets/" + id);
+  },
+  // Saves a pet to the database
+  savePet: function (petData) {
+    return axios.post("/api/pets", petData);
+  }
+};
