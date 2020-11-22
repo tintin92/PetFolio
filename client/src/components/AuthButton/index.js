@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom';
-import Auth from "../../utils/Auth";
+import Auth from "../utils/Auth";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../utils/UserContext";
+import { UserContext } from "../utils/UserContext";
 
 const AuthButton = () => {
 	console.log("NAV", Auth.isAuthenticated);
